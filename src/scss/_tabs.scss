@@ -1,0 +1,48 @@
+.tabs {
+  &__nav {
+    display: flex;
+  }
+
+  &__btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-right: 1px solid var(--color-primary-600);
+    border-bottom: 1px solid var(--color-primary-600);
+    border-radius: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'PlayfairDisplaySC', serif;
+    color: var(--color-primary-500);
+    transition: 0.3s;
+    &--active {
+      border-color: var(--color-primary-700);
+      color: var(--color-primary-700);
+    }
+  }
+
+  &__item {
+    display: none;
+    &--active {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .tabs {
+    &__btn {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .tabs {
+    &__btn {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+  }
+}
