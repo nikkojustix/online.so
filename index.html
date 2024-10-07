@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head class="smooth-scroll">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <meta name="description" content="description" />
+  <!-- <base href="https://example.com" /> -->
+
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/img/favicons/icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/assets/img/favicons/manifest.webmanifest" />
+  <link rel="yandex-tableau-widget" href="/tableau.json" />
+
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header header--main" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__topbar">
+        <a class="logo" href="./">
+          <img class="logo__img" src="img/logo.svg" alt="Логотип" />
+        </a>
+        <form class="search" role="search" method="get" action="">
+          <input class="search__btn" type="submit" value="" />
+          <div class="search__separator"></div>
+          <input class="search__input" type="search" value="" name="s" placeholder="Искать здесь" />
+        </form>
+        <div class="header__social">
+          <a class="link header__link" href="tel:+7 (999) 123-45-67">+7 (999) 123-45-67</a>
+        </div>
+        <div class="header__actions">
+          <button class="search-trigger">
+            <img class="search-trigger__icon" src="img/search.svg" alt="" />
+          </button>
+          <div class="header__cart">
+            <a class="cart-contents header__cart-link" href="https://nivo.msk.ru/cart/" data-count="0">
+              <svg class="header__cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.4322 5.64C21.3794 5.57663 21.3133 5.52563 21.2386 5.49064C21.1639 5.45565 21.0825 5.4375 21 5.4375H5.71875L5.12156 2.14969C5.09807 2.02008 5.02984 1.90282 4.92876 1.81836C4.82768 1.73389 4.70016 1.68758 4.56844 1.6875H2.25C2.10082 1.6875 1.95774 1.74676 1.85225 1.85225C1.74676 1.95774 1.6875 2.10082 1.6875 2.25C1.6875 2.39918 1.74676 2.54226 1.85225 2.64775C1.95774 2.75324 2.10082 2.8125 2.25 2.8125H4.09875L6.51844 16.1194C6.5943 16.5389 6.79873 16.9246 7.10344 17.2228C6.73521 17.5169 6.46015 17.9115 6.31155 18.3587C6.16295 18.806 6.14719 19.2867 6.26617 19.7427C6.38516 20.1987 6.63378 20.6105 6.98195 20.9281C7.33011 21.2457 7.76289 21.4556 8.22788 21.5323C8.69286 21.609 9.17012 21.5493 9.60187 21.3604C10.0336 21.1714 10.4013 20.8614 10.6605 20.4678C10.9197 20.0742 11.0592 19.6139 11.0622 19.1426C11.0651 18.6714 10.9314 18.2093 10.6772 17.8125H15.5728C15.2813 18.2687 15.15 18.8089 15.1995 19.348C15.249 19.8871 15.4766 20.3943 15.8463 20.7897C16.216 21.1852 16.7069 21.4463 17.2414 21.5318C17.776 21.6174 18.3238 21.5226 18.7985 21.2624C19.2732 21.0022 19.6478 20.5913 19.8631 20.0947C20.0785 19.598 20.1223 19.0437 19.9878 18.5194C19.8533 17.995 19.5481 17.5303 19.1203 17.1986C18.6924 16.8669 18.1663 16.6871 17.625 16.6875H8.54719C8.32763 16.6875 8.11503 16.6105 7.94644 16.4698C7.77786 16.3292 7.66399 16.1338 7.62469 15.9178L7.28719 14.0625H18.3844C18.8674 14.0626 19.3352 13.8932 19.7061 13.5838C20.077 13.2744 20.3276 12.8446 20.4141 12.3694L21.5531 6.10031C21.5678 6.01941 21.5646 5.93627 21.5437 5.85674C21.5228 5.7772 21.4848 5.70322 21.4322 5.64ZM9.9375 19.125C9.9375 19.3846 9.86052 19.6383 9.7163 19.8542C9.57208 20.07 9.3671 20.2383 9.12727 20.3376C8.88744 20.4369 8.62354 20.4629 8.36894 20.4123C8.11434 20.3616 7.88048 20.2366 7.69692 20.0531C7.51337 19.8695 7.38836 19.6357 7.33772 19.3811C7.28708 19.1265 7.31307 18.8626 7.41241 18.6227C7.51175 18.3829 7.67997 18.1779 7.89581 18.0337C8.11165 17.8895 8.36541 17.8125 8.625 17.8125C8.9731 17.8125 9.30694 17.9508 9.55308 18.1969C9.79922 18.4431 9.9375 18.7769 9.9375 19.125ZM18.9375 19.125C18.9375 19.3846 18.8605 19.6383 18.7163 19.8542C18.5721 20.07 18.3671 20.2383 18.1273 20.3376C17.8874 20.4369 17.6235 20.4629 17.3689 20.4123C17.1143 20.3616 16.8805 20.2366 16.6969 20.0531C16.5134 19.8695 16.3884 19.6357 16.3377 19.3811C16.2871 19.1265 16.3131 18.8626 16.4124 18.6227C16.5117 18.3829 16.68 18.1779 16.8958 18.0337C17.1117 17.8895 17.3654 17.8125 17.625 17.8125C17.9731 17.8125 18.3069 17.9508 18.5531 18.1969C18.7992 18.4431 18.9375 18.7769 18.9375 19.125ZM19.3069 12.1678C19.2676 12.3838 19.1537 12.5792 18.9851 12.7198C18.8165 12.8605 18.6039 12.9375 18.3844 12.9375H7.08281L5.92406 6.5625H20.3259L19.3069 12.1678Z"
+                  fill="#42923C"
+                />
+              </svg>
+              <span class="header__cart-text">Корзина</span>
+            </a>
+          </div>
+          <button class="menu-trigger">
+            <span class="menu-trigger__icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link menu__link--fill" href="#">Каталог курсов</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Бесплатный доступ</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+            <li class="menu__item menu__item--submenu">
+              <a class="menu__link" href="#"
+                >О школе<span class="menu__dropdown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19.946 8.94597L12.446 16.446C12.3405 16.5513 12.1975 16.6105 12.0485 16.6105C11.8994 16.6105 11.7564 16.5513 11.651 16.446L4.15097 8.94597C4.05161 8.83934 3.99752 8.6983 4.00009 8.55258C4.00266 8.40685 4.06169 8.26781 4.16475 8.16475C4.26781 8.06169 4.40685 8.00266 4.55258 8.00009C4.6983 7.99752 4.83934 8.05161 4.94597 8.15097L12.0485 15.2525L19.151 8.15097C19.2576 8.05161 19.3986 7.99752 19.5444 8.00009C19.6901 8.00266 19.8291 8.06169 19.9322 8.16475C20.0352 8.26781 20.0943 8.40685 20.0969 8.55258C20.0994 8.6983 20.0453 8.83934 19.946 8.94597Z"
+                      fill=""
+                    />
+                  </svg> </span
+              ></a>
+              <ul class="menu__submenu">
+                <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Частые вопросы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Как перейти на свободное образование</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Сведения об образовательной организации</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Экстернат</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#">Как поступить</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <main class="main">
+        <!--  -->
+        <section class="section hero">
+  <div class="container">
+    <div class="hero__inner">
+      <img class="hero__img" src="img/hero-img.jpg" alt="" />
+      <div class="hero__main">
+        <h1 class="title hero__title">Семейное образование онлайн</h1>
+        <p class="hero__descr">Качественное, доступное, комплексное обучение в доброжелательной обстановке</p>
+        <button class="btn">Подобрать курс</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="section special-offers">
+  <div class="container">
+    <h2 class="section__title">Специальные предложения</h2>
+  </div>
+  <div class="splide special-offers__slider" role="group">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="container">
+            <div class="special-offers__slide">
+              <p class="special-offers__name">Запишитесь на бесплатные летние курсы</p>
+              <p class="special-offers__descr">Лето с пользой. Раскройте потенциал с помощью бесплатных уроков!</p>
+              <button class="btn btn--white-green">Записаться</button>
+            </div>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="container">
+            <div class="special-offers__slide">
+              <p class="special-offers__name">Запишитесь на бесплатные летние курсы</p>
+              <p class="special-offers__descr">Лето с пользой. Раскройте потенциал с помощью бесплатных уроков!</p>
+              <button class="btn btn--white-green">Записаться</button>
+            </div>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="container">
+            <div class="special-offers__slide">
+              <p class="special-offers__name">Запишитесь на бесплатные летние курсы</p>
+              <p class="special-offers__descr">Лето с пользой. Раскройте потенциал с помощью бесплатных уроков!</p>
+              <button class="btn btn--white-green">Записаться</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <ul class="splide__pagination"></ul>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="section for-whom">
+  <div class="container">
+    <div class="for-whom__inner">
+      <h2 class="section__title">Для <span class="section__highlight">кого</span> наша школа?</h2>
+      <div class="for-whom__items">
+        <div class="for-whom__item">
+          <h3 class="for-whom__name">Для семейного обучения</h3>
+          <img class="for-whom__img" src="img/for-whom/img-1.svg" alt="" />
+        </div>
+        <div class="for-whom__item">
+          <h3 class="for-whom__name">Для тех, кто часто пропускает школу</h3>
+          <img class="for-whom__img" src="img/for-whom/img-2.svg" alt="" />
+        </div>
+        <div class="for-whom__item">
+          <h3 class="for-whom__name">Для путешественников</h3>
+          <img class="for-whom__img" src="img/for-whom/img-3.svg" alt="" />
+        </div>
+        <div class="for-whom__item">
+          <h3 class="for-whom__name">Об условиях зачисления</h3>
+          <img class="for-whom__img" src="img/for-whom/img-4.svg" alt="" />
+        </div>
+      </div>
+      <div class="for-whom__center">
+        <a class="btn" href="#">Подойдет ли обучение мне?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="section steps">
+  <div class="container">
+    <div class="steps__inner">
+      <h2 class="section__title"><span class="section__highlight">Как</span> проходит обучение?</h2>
+      <div class="steps__items">
+        <div class="steps__item">
+          <div class="steps__icon">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M83.3332 66.6668V29.1668C83.3332 26.9567 82.4552 24.8371 80.8924 23.2743C79.3296 21.7115 77.21 20.8335 74.9999 20.8335H24.9999C22.7897 20.8335 20.6701 21.7115 19.1073 23.2743C17.5445 24.8371 16.6666 26.9567 16.6666 29.1668V66.6668M83.3332 66.6668H16.6666M83.3332 66.6668L88.6666 77.2918C88.9878 77.9293 89.1399 78.6386 89.1082 79.3517C89.0766 80.0648 88.8623 80.7578 88.4858 81.3643C88.1094 81.9708 87.5834 82.4704 86.9584 82.8152C86.3334 83.16 85.6303 83.3385 84.9165 83.3335H15.0832C14.3694 83.3385 13.6663 83.16 13.0413 82.8152C12.4163 82.4704 11.8904 81.9708 11.514 81.3643C11.1375 80.7578 10.9232 80.0648 10.8915 79.3517C10.8599 78.6386 11.012 77.9293 11.3332 77.2918L16.6666 66.6668"
+                stroke="white"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="steps__descr">Ребёнок приходит на&nbsp;онлайн уроки, слушает преподавателя, отвечает на&nbsp;его вопросы</p>
+        </div>
+        <div class="steps__item">
+          <div class="steps__icon">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M55.8334 8.33314H25C22.7899 8.33314 20.6703 9.21111 19.1075 10.7739C17.5447 12.3367 16.6667 14.4563 16.6667 16.6665V83.3331C16.6667 85.5433 17.5447 87.6629 19.1075 89.2257C20.6703 90.7885 22.7899 91.6665 25 91.6665H75C77.2102 91.6665 79.3298 90.7885 80.8926 89.2257C82.4554 87.6629 83.3334 85.5433 83.3334 83.3331V52.4998M8.33337 24.9998H25M8.33337 41.6665H25M8.33337 58.3331H25M8.33337 74.9998H25M89.075 23.4415C90.7349 21.7817 91.6673 19.5305 91.6673 17.1831C91.6673 14.8358 90.7349 12.5846 89.075 10.9248C87.4152 9.26499 85.164 8.33252 82.8167 8.33252C80.4694 8.33252 78.2182 9.26499 76.5584 10.9248L55.6834 31.8081C54.6927 32.7982 53.9676 34.022 53.575 35.3665L50.0875 47.3248C49.983 47.6833 49.9767 48.0634 50.0694 48.4252C50.1621 48.787 50.3503 49.1172 50.6144 49.3813C50.8785 49.6454 51.2087 49.8336 51.5705 49.9263C51.9323 50.019 52.3123 50.0127 52.6709 49.9081L64.6292 46.4206C65.9736 46.0281 67.1974 45.3029 68.1875 44.3123L89.075 23.4415Z"
+                stroke="white"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="steps__descr">
+            Выполняет домашние задания, используя презентацию и&nbsp;по&nbsp;надобности пересмотрев урок в&nbsp;записи
+          </p>
+        </div>
+        <div class="steps__item">
+          <div class="steps__icon">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M32.9167 83.3334C40.8691 87.4128 50.0171 88.5177 58.7121 86.4491C67.4071 84.3805 75.0773 79.2743 80.3407 72.0508C85.604 64.8272 88.1143 55.9613 87.4191 47.0507C86.724 38.1401 82.8691 29.7707 76.5492 23.4508C70.2293 17.1309 61.86 13.2761 52.9494 12.5809C44.0388 11.8858 35.1728 14.3961 27.9493 19.6594C20.7257 24.9227 15.6196 32.593 13.551 41.288C11.4823 49.983 12.5873 59.131 16.6667 67.0834L8.33337 91.6667L32.9167 83.3334Z"
+                stroke="white"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="steps__descr">Получает подробную обратную связь по&nbsp;заданиям от&nbsp;проверяющих</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="section quiz">
+  <div class="container">
+    <div class="section__title-row">
+      <h2 class="section__title section__title--in-row">
+        <span class="section__highlight">Почему</span> стоит выбрать свободное образование
+      </h2>
+      <img class="quiz__icon" src="img/clip.svg" alt="" />
+    </div>
+  </div>
+  <div class="quiz__bg">
+    <div class="container">
+      <div class="quiz__inner">
+        <div class="quiz__info">
+          <ol class="quiz__info-list">
+            <li class="quiz__info-item">Здоровье детей, природосообразный подход</li>
+            <li class="quiz__info-item">Любовь и интерес<br />к учебе</li>
+            <li class="quiz__info-item">Творческий подход, авторские методики</li>
+            <li class="quiz__info-item">Спокойное состояние и доброжелательная атмосфера</li>
+          </ol>
+        </div>
+        <div class="quiz__form">
+          <!-- <form class="form" action="#">
+            <img class="quiz__img" src="img/quiz-img.jpg" alt="" />
+            <div class="quiz__form-inner">
+              <p class="quiz__title">Подбор образовательной программы на семейном образовании</p>
+              <button class="btn quiz__start-btn">Начать</button>
+            </div>
+          </form> -->
+          <!-- <form class="form" action="#">
+            <div class="form__quiz">
+              <p class="quiz__question">В каком вы классе?</p>
+              <div class="quiz__checkbox-columns">
+                <div class="quiz__checkbox-column">
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q11" />
+                    <label class="form__checkbox-label" for="q11">1 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q12" />
+                    <label class="form__checkbox-label" for="q12">2 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q13" />
+                    <label class="form__checkbox-label" for="q13">3 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q14" />
+                    <label class="form__checkbox-label" for="q14">4 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q15" />
+                    <label class="form__checkbox-label" for="q15">5 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q16" />
+                    <label class="form__checkbox-label" for="q16">6 класс</label>
+                  </div>
+                </div>
+                <div class="quiz__checkbox-column">
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q17" />
+                    <label class="form__checkbox-label" for="q17">7 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q18" />
+                    <label class="form__checkbox-label" for="q18">8 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q19" />
+                    <label class="form__checkbox-label" for="q19">9 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q110" />
+                    <label class="form__checkbox-label" for="q110">10 класс</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q111" />
+                    <label class="form__checkbox-label" for="q111">11 класс</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz__btns">
+                <button class="btn btn--white-pink btn--sm">Назад</button>
+                <button class="btn btn--sm">Далее</button>
+              </div>
+            </div>
+          </form> -->
+          <!-- <form class="form" action="#">
+            <div class="form__quiz">
+              <p class="quiz__question">Что вас интересует?</p>
+              <div class="quiz__checkbox-column">
+                <div class="form__group">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q21" />
+                  <label class="form__checkbox-label" for="q21">Обучение онлайн</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q22" />
+                  <label class="form__checkbox-label" for="q22">Промежуточная аттестация</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="q23" />
+                  <label class="form__checkbox-label" for="q23">Переход на семейное образование</label>
+                </div>
+              </div>
+              <div class="quiz__btns">
+                <button class="btn btn--white-pink btn--sm">Назад</button>
+                <button class="btn btn--sm">Далее</button>
+              </div>
+            </div>
+          </form> -->
+          <!-- <form class="form" action="#">
+            <div class="form__quiz">
+              <p class="quiz__question">Ваши дети учаться на семейном образовании?</p>
+              <div class="quiz__checkbox-column">
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q31" />
+                  <label class="form__radio-label" for="q31">Обучение онлайн</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q32" />
+                  <label class="form__radio-label" for="q32">Промежуточная аттестация</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q33" />
+                  <label class="form__radio-label" for="q33">Переход на семейное образование</label>
+                </div>
+              </div>
+              <div class="quiz__btns">
+                <button class="btn btn--white-pink btn--sm">Назад</button>
+                <button class="btn btn--sm">Далее</button>
+              </div>
+            </div>
+          </form> -->
+          <!-- <form class="form" action="#">
+            <div class="form__quiz">
+              <p class="quiz__question">Как вы обучаетесь сейчас?</p>
+              <div class="quiz__checkbox-column">
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q41" />
+                  <label class="form__radio-label" for="q41">В онлайн школе</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q42" />
+                  <label class="form__radio-label" for="q42">Учимся самостоятельно</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q43" />
+                  <label class="form__radio-label" for="q43">Репититоры</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q44" />
+                  <label class="form__radio-label" for="q44">Совмещенная схема</label>
+                </div>
+                <div class="form__group">
+                  <input class="form__radio visually-hidden" type="radio" name="radio" id="q45" />
+                  <label class="form__radio-label" for="q45">Школа</label>
+                </div>
+              </div>
+              <div class="quiz__btns">
+                <button class="btn btn--white-pink btn--sm">Назад</button>
+                <button class="btn btn--sm">Далее</button>
+              </div>
+            </div>
+          </form> -->
+          <form class="form" action="#">
+            <div class="form__quiz">
+              <p class="quiz__question">Отправьте контакты и мы подберемдля вас программу!</p>
+              <div class="form__group">
+                <label class="form__label" for="quiz-name">Ваше имя</label>
+                <input class="form__input" id="quiz-name" type="text" name="quiz-name" placeholder="Имя" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="quiz-tel">Номер телефона</label>
+                <input class="form__input form__input--tel" id="quiz-tel" type="tel" name="tel" placeholder="Телефон" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="quiz-email">Адрес электронной почты</label>
+                <input class="form__input" id="quiz-email" type="email" name="quiz-email" placeholder="Email" />
+              </div>
+              <div class="form__group">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="license" id="quiz-license" checked />
+                <label class="form__checkbox-label" for="quiz-license"
+                  >Даю согласие на обработку моих <a class="form__link" href="#">персональных данных</a>
+                </label>
+              </div>
+              <div class="quiz__btns">
+                <button class="btn btn--white-pink btn--sm">Назад</button>
+                <button class="btn btn--sm">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="section why-us">
+  <div class="container">
+    <div class="why-us__inner">
+      <h2 class="section__title">почему стоит выбрать <span class="section__highlight">онлайн</span>&nbsp;школу</h2>
+      <div class="why-us__items">
+        <div class="why-us__item">
+          <button class="why-us__btn">Качество усвоения знаний по всем предметам</button>
+          <div class="why-us__info">
+            Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно заниматься
+            из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с записанным
+            видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря современным
+            технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело планировать семейный
+            отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Комфортные <br />условия</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Минимизация <br />расходов</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Приоритет <br />здоровью</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Доступность обучения <br />для каждого</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Отсутствие напряженной <br />обстановки</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Удобный <br />гибкий график</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Эффективная программа <br />онлайн-обучения</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+        <div class="why-us__item">
+          <button class="why-us__btn">Лучший педагогический <br />состав</button>
+          <div class="why-us__info">
+            test2Занятия проходят в комфортных домашних условиях. Нет географической привязки к месту обучения или жительства: можно
+            заниматься из любой точки мира полный учебный год. При отсутствии возможности посмотреть урок онлайн есть опция ознакомления с
+            записанным видео. Это можно сделать с любого устройства с выходом в Интернет, будь то планшет, ПК, ноутбук и т.д, благодаря
+            современным технологиям. Даже уехав за рубеж, ученик продолжит обучение из любой страны или города, поэтому можно смело
+            планировать семейный отдых и активности.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="section education">
+  <div class="container">
+    <div class="education__inner">
+      <h2 class="section__title">Подберите <span class="section__highlight">форму</span> обучения</h2>
+      <div class="education__items">
+        <div class="education__item">
+          <div class="education__item-info">
+            <h3 class="education__name">ОНЛАЙН-ШКОЛА</h3>
+            <ul class="education__list">
+              <li class="education__list-item">С 1 по 11 класс</li>
+              <li class="education__list-item">Проверка домашних заданий</li>
+              <li class="education__list-item">Обратная связь и поддержка родителей</li>
+              <li class="education__list-item">Посещение уроков онлайн</li>
+              <li class="education__list-item">Все уроки и материалы остаются в личном кабинете</li>
+            </ul>
+          </div>
+          <div class="education__actions">
+            <p class="education__price">6500-7800 руб. в месяц</p>
+            <button class="btn btn--white-pink">Записаться</button>
+          </div>
+        </div>
+        <div class="education__item">
+          <div class="education__item-info">
+            <h3 class="education__name">ШКОЛА В ЗАПИСИ</h3>
+            <ul class="education__list">
+              <li class="education__list-item">С 1 по 11 класс</li>
+              <li class="education__list-item">Самопроверка домашних заданий</li>
+              <li class="education__list-item">Обратная связь и вебинары для родителей</li>
+              <li class="education__list-item">Прохождение занятий в любое время</li>
+              <li class="education__list-item">Все материалы остаются в личном кабинете</li>
+            </ul>
+          </div>
+          <div class="education__actions">
+            <p class="education__price">6500-7800 руб. в месяц</p>
+            <a class="btn btn--white-pink" href="#">Подобрать курс</a>
+          </div>
+        </div>
+        <div class="education__item">
+          <div class="education__item-info">
+            <h3 class="education__name">КУРСЫ</h3>
+            <ul class="education__list">
+              <li class="education__list-item">Предметные курсы с 0 по 11 класс</li>
+              <li class="education__list-item">На весь учебный год или по конкретной теме</li>
+              <li class="education__list-item">Глубокое изучение предмета и понятное объяснение тем</li>
+              <li class="education__list-item">Для совмещения с очным обучением в школе</li>
+              <li class="education__list-item">Все материалы остаются в личном кабинете</li>
+            </ul>
+          </div>
+          <div class="education__actions">
+            <a class="btn btn--white-pink" href="#">Выбрать курс</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--  -->
+      </main>
+      <footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a class="logo footer__logo" href="/">
+        <img class="logo__img" src="img/logo.svg" alt="Логотип" />
+      </a>
+      <nav class="footer__menu">
+        <a class="footer__link link" href="#">Услуги</a>
+        <a class="footer__link link" href="#">Портфолио</a>
+        <a class="footer__link link" href="#">О нас</a>
+      </nav>
+      <div class="footer__actions">
+        <a class="footer__phone link" href="tel:+7 (999) 123-45-67">+7 (999) 123-45-67</a>
+        <button class="btn">Заказать звонок</button>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-to-top">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M30 5.62501C23.5353 5.62501 5.62499 5.62501 5.62499 5.62501C5.62499 5.62501 5.62499 23.5354 5.62499 30C5.62499 36.0612 5.62501 54.375 5.62501 54.375C5.62501 54.375 22.5999 54.375 30 54.375C38.0291 54.375 54.375 54.375 54.375 54.375C54.375 54.375 54.375 35.4309 54.375 30C54.375 24.1125 54.375 5.625 54.375 5.625C54.375 5.625 37.5736 5.62501 30 5.62501ZM40.705 30.545C40.3544 30.8969 39.8787 31.0955 39.3821 31.0973C38.8854 31.0992 38.4082 30.9042 38.055 30.555L31.875 24.425V40.0775C31.875 40.5748 31.6775 41.0517 31.3258 41.4033C30.9742 41.755 30.4973 41.9525 30 41.9525C29.5027 41.9525 29.0258 41.755 28.6742 41.4033C28.3225 41.0517 28.125 40.5748 28.125 40.0775V24.425L21.945 30.555C21.5916 30.9051 21.1136 31.1005 20.6162 31.0981C20.1187 31.0958 19.6426 30.8959 19.2925 30.5425C18.9424 30.1891 18.7471 29.7111 18.7494 29.2137C18.7517 28.7162 18.9516 28.2401 19.305 27.89L28.68 18.5875C29.0311 18.2394 29.5056 18.0441 30 18.0441C30.4944 18.0441 30.9689 18.2394 31.32 18.5875L40.695 27.89C40.8704 28.0634 41.0099 28.2696 41.1055 28.497C41.2011 28.7243 41.2509 28.9683 41.2521 29.2149C41.2533 29.4615 41.2058 29.706 41.1123 29.9342C41.0188 30.1625 40.8813 30.37 40.7075 30.545H40.705Z"
+        fill=""
+      />
+    </svg>
+  </div>
+</footer>
+
+<div class="modal modal--why-us">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Заказать звонок</div>
+    </div>
+    <div class="modal__body"></div>
+  </div>
+</div>
+
+<!-- <div class="modal modal--callback">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Заказать звонок</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--callback-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="callback-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="callback-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="callback-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="callback-modal-tel">Номер телефона</label>
+        </div>
+        <button class="form__btn btn" type="submit">Заказать</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="callback-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="callback-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--order">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Заказать товар</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--order-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="order-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="order-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="order-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="order-modal-tel">Номер телефона</label>
+        </div>
+        <button class="form__btn btn" type="submit">Заказать</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="order-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="order-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--film">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Рассчитать цену пленки</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--film-modal form--column" action="">
+        <select class="form__select form__input" name="film-type" id="film-type">
+          <option value="" selected disabled>Выберите тип пленки</option>
+          <option value="Полотно">Полотно</option>
+          <option value="Полурукав">Полурукав</option>
+        </select>
+        <select class="form__select form__input" name="film-thickness" id="film-thickness">
+          <option value="" disabled selected>Выберите толщину</option>
+          <option value="12.5">12,5</option>
+          <option value="15">15</option>
+          <option value="19">19</option>
+          <option value="23.5">23,5</option>
+          <option value="35">35</option>
+        </select>
+        <select class="form__select form__input" name="film-width" id="film-width">
+          <option value="" selected disabled>Укажите ширину</option>
+          <option value="200">200</option>
+          <option value="250">250</option>
+          <option value="300">300</option>
+          <option value="350">350</option>
+          <option value="400">400</option>
+          <option value="450">450</option>
+          <option value="500">500</option>
+          <option value="550">550</option>
+          <option value="600">600</option>
+          <option value="650">650</option>
+          <option value="700">700</option>
+          <option value="750">750</option>
+          <option value="800">800</option>
+          <option value="850">850</option>
+          <option value="900">900</option>
+          <option value="950">950</option>
+          <option value="1000">1000</option>
+          <option value="1050">1050</option>
+          <option value="1100">1100</option>
+          <option value="1150">1150</option>
+          <option value="1200">1200</option>
+          <option value="1250">1250</option>
+          <option value="1300">1300</option>
+          <option value="1350">1350</option>
+          <option value="1400">1400</option>
+          <option value="1450">1450</option>
+          <option value="1500">1500</option>
+          <option value="1550">1550</option>
+          <option value="1600">1600</option>
+          <option value="1650">1650</option>
+          <option value="1700">1700</option>
+          <option value="1750">1750</option>
+          <option value="1800">1800</option>
+          <option value="1850">1850</option>
+          <option value="1900">1900</option>
+          <option value="1950">1950</option>
+          <option value="2000">2000</option>
+        </select>
+        <select class="form__select form__input" name="film-length" id="film-length">
+          <option value="" selected disabled>Укажите длину</option>
+          <option value="350">350</option>
+          <option value="400">400</option>
+          <option value="450">450</option>
+          <option value="500">500</option>
+          <option value="550">550</option>
+          <option value="600">600</option>
+          <option value="650">650</option>
+          <option value="700">700</option>
+          <option value="750">750</option>
+          <option value="800">800</option>
+          <option value="850">850</option>
+          <option value="900">900</option>
+          <option value="950">950</option>
+          <option value="1000">1000</option>
+          <option value="1050">1050</option>
+          <option value="1100">1100</option>
+          <option value="1150">1150</option>
+          <option value="1200">1200</option>
+          <option value="1250">1250</option>
+          <option value="1300">1300</option>
+          <option value="1350">1350</option>
+          <option value="1400">1400</option>
+          <option value="1450">1450</option>
+          <option value="1500">1500</option>
+        </select>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="film-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="film-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="film-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Рассчитать цену</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="film-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="film-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--parts">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Узнать цену запчасти</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--parts-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-manufacturer" name="manufacturer" type="text" placeholder="Производитель" />
+          <label class="form__label" for="parts-modal-manufacturer">Производитель</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-brand" name="brand" type="text" placeholder="Марка" />
+          <label class="form__label" for="parts-modal-brand">Марка</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input form__input--file" id="parts-modal-file" name="file" type="file" placeholder="Фото шильды" />
+          <label class="form__label" for="parts-modal-file">Фото шильды</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-part" name="part" type="text" placeholder="Запчасть" />
+          <label class="form__label" for="parts-modal-part">Запчасть</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="parts-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="parts-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="parts-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Отправить запрос</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="parts-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="parts-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--repair">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Рассчитать цену ремонта</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--repair-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-brand" name="brand" type="text" placeholder="Марка оборудования" />
+          <label class="form__label" for="repair-modal-brand">Марка оборудования</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input form__input--file" id="repair-modal-file" name="file" type="file" placeholder="Фото оборудования" />
+          <label class="form__label" for="repair-modal-file">Фото оборудования</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-quantity" name="quantity" type="text" placeholder="Количество оборудования" />
+          <label class="form__label" for="repair-modal-quantity">Количество оборудования</label>
+        </div>
+
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-address" name="address" type="text" placeholder="Адрес местонахождения" />
+          <label class="form__label" for="repair-modal-address">Адрес местонахождения</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="repair-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="repair-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="repair-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Отправить запрос</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="repair-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="repair-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
