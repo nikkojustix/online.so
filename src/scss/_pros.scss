@@ -1,0 +1,94 @@
+.pros {
+  &__inner {
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 140px;
+    row-gap: 60px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+  }
+
+  &__info {
+  }
+
+  &__name {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 1299px) {
+  .pros {
+    &__items {
+      gap: 60px;
+    }
+    &__item {
+      gap: 24px;
+    }
+    &__icon {
+      width: 100px;
+      height: 100px;
+    }
+    &__name {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .pros {
+    &__items {
+      gap: 40px;
+    }
+    &__item {
+      gap: 16px;
+      align-items: flex-start;
+    }
+    &__icon {
+      width: 64px;
+      height: 64px;
+    }
+    &__name {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    &__descr {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .pros {
+    &__items {
+      grid-template-columns: 1fr;
+    }
+  }
+}

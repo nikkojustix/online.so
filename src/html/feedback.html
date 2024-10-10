@@ -1,0 +1,36 @@
+<section class="section feedback">
+  <div class="container">
+    <div class="feedback__inner">
+      <div class="section__title-row">
+        <h2 class="section__title section__title--in-row">Свяжитесь с нами сегодня</h2>
+        <img class="section__title-icon" src="@img/sphere.svg" alt="" />
+      </div>
+      <div class="feedback__main">
+        <form class="feedback__form form" action="#">
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="feedback-name">Ваше имя</label>
+              <input class="form__input" id="feedback-name" type="text" name="your-name" placeholder="Имя" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="feedback-tel">Номер телефона</label>
+              <input class="form__input form__input--tel" id="feedback-tel" type="tel" name="your-tel" placeholder="Телефон" />
+            </div>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="feedback-email">Email</label>
+            <input class="form__input" id="feedback-email" type="email" name="your-email" placeholder="Email" />
+          </div>
+          <input class="btn btn--white-pink" type="submit" value="Отправить" />
+          <div class="form__group">
+            <input class="form__checkbox visually-hidden" type="checkbox" name="license" id="feedback-license" checked="" />
+            <label class="form__checkbox-label" for="feedback-license"
+              >Даю согласие на обработку моих <a class="form__link" href="#">персональных данных</a>
+            </label>
+          </div>
+        </form>
+        <img class="feedback__img" src="@img/feedback-img.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>

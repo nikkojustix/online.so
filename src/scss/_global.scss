@@ -188,6 +188,9 @@ img {
     font-weight: 700;
     color: var(--color-secondary);
   }
+  &__title-icon {
+    max-width: 100px;
+  }
 }
 
 .title {
@@ -658,6 +661,9 @@ img {
     &__title {
       font-size: 32px;
     }
+    &__title-icon {
+      max-width: 80px;
+    }
   }
   .title {
     font-size: 40px;
@@ -689,6 +695,11 @@ img {
   }
   .title {
     font-size: 32px;
+  }
+  .section {
+    &__title-icon {
+      display: none;
+    }
   }
   .btn {
     font-size: 14px;
