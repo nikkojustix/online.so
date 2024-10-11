@@ -3,36 +3,40 @@
   }
 
   &__main {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    background-color: var(--color-primary);
+    border-radius: 16px;
   }
 
   &__form {
+    max-width: 530px;
+    width: 100%;
   }
 
   &__img {
+    border-radius: 16px;
   }
 }
 
-.form {
-  &__row {
-  }
-
-  &__group {
-  }
-
-  &__label {
-  }
-
-  &__input {
-    &--tel {
+@media (max-width: 1299px) {
+  .feedback {
+    &__main {
+      justify-content: center;
+    }
+    &__img {
+      display: none;
     }
   }
+}
 
-  &__checkbox {
-  }
-
-  &__checkbox-label {
-  }
-
-  &__link {
+@media (max-width: 767px) {
+  .feedback {
+    .form__row {
+      flex-wrap: wrap;
+    }
   }
 }

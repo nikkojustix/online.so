@@ -450,6 +450,30 @@ img {
 .form {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  --color-form-border: var(--color-white);
+  --color-form-label: var(--color-white);
+  --color-form-placeholder: var(--color-primary-dark);
+  --color-form-input: var(--color-text-main);
+  --color-form-link: var(--color-pink-800);
+  --color-form-link-hover: var(--color-pink-700);
+  --form-checkbox: url('@img/checkboxmark-green.svg');
+
+  &--white {
+    --color-form-border: var(--color-primary);
+    --color-form-label: var(--color-gray-600);
+    --color-form-placeholder: var(--color-gray-600);
+    --color-form-input: var(--color-text-main);
+    --color-form-link: var(--color-primary);
+    --color-form-link-hover: var(--color-primary-light);
+    --form-checkbox: url('@img/checkboxmark-white.svg');
+  }
+  &--pink {
+    --color-form-placeholder: var(--color-secondary-dark);
+    --color-form-link: var(--color-primary);
+    --color-form-link-hover: var(--color-primary-light);
+    --form-checkbox: url('@img/checkboxmark-pink.svg');
+  }
 
   &__quiz {
     background-color: var(--color-white);
@@ -489,34 +513,27 @@ img {
     line-height: 1.2;
     font-weight: 400;
     font-family: inherit;
-    color: var(--color-text-main);
+    color: var(--color-form-input);
     background-color: transparent;
-    border: 1px solid var(--color-gray-900);
+    // border: 2px solid var(--color-form-border);
+    border: none;
+    box-shadow: inset 0 0 0 2px var(--color-form-border);
     border-radius: 16px;
     outline: none;
     transition: 0.3s;
 
-    &:not(:placeholder-shown) {
-      // outline: 1px solid var(--color-dark);
-    }
-
     @include hover {
-      border-color: var(--color-primary);
+      box-shadow: inset 0 0 0 3px var(--color-form-border);
     }
 
     &:focus {
-      border-color: var(--color-primary);
+      box-shadow: inset 0 0 0 3px var(--color-form-border);
     }
 
     &::placeholder {
-      color: var(--color-text-main);
+      color: var(--color-form-placeholder);
     }
 
-    // &:required {
-    //   & + .form__label .form__req {
-    //     display: inline;
-    //   }
-    // }
     &.error {
       border-color: var(--color-error);
       & + .form__label,
@@ -536,8 +553,8 @@ img {
   &__label {
     font-size: 14px;
     font-weight: 300;
-    color: var(--color-text-main);
-    margin-bottom: 8px;
+    color: var(--color-form-label);
+    margin-bottom: 4px;
     display: block;
   }
 
@@ -565,7 +582,8 @@ img {
       left: 0;
       width: 20px;
       height: 20px;
-      border: 1px solid var(--color-gray-900);
+      // border: 1px solid var(--color-form-border);
+      box-shadow: inset 0 0 0 1px var(--color-form-border);
       background-color: transparent;
       background-position: center;
       background-repeat: no-repeat;
@@ -574,7 +592,7 @@ img {
 
     @include hover {
       &::before {
-        border-color: var(--color-primary);
+        box-shadow: inset 0 0 0 2px var(--color-form-border);
       }
     }
   }
@@ -586,17 +604,21 @@ img {
   &__checkbox:focus + &__checkbox-label::before {
     // outline: 1px solid var(--color-primary);
     // box-shadow: 0 0px 8px var(--color-primary);
-    border-color: var(--color-primary);
+    // border-color: var(--color-primary);
+    box-shadow: inset 0 0 0 2px var(--color-form-border);
   }
 
   &__checkbox:checked + &__checkbox-label::before {
-    background-image: url('@img/checkboxmark.svg');
-    border-color: var(--color-primary);
-    background-color: var(--color-primary);
+    // background-image: url('@img/checkboxmark.svg');
+    background-image: var(--form-checkbox);
+    // border-color: var(--color-primary);
+    box-shadow: none;
+    background-color: var(--color-form-border);
+    background-size: contain;
   }
 
   &__radio:focus + &__radio-label::before {
-    border-color: var(--color-primary);
+    border-color: var(--color-form-border);
   }
 
   &__radio:checked + &__radio-label::before {
@@ -606,17 +628,17 @@ img {
   }
 
   &__link {
-    color: inherit;
+    color: var(--color-form-link);
     transition: 0.3s;
 
     @include hover {
-      color: var(--color-primary);
+      color: var(--color-form-link-hover);
     }
 
     &:focus {
       outline: none;
       text-decoration: underline;
-      color: var(--color-primary);
+      color: var(--color-form-link-hover);
     }
   }
 }
