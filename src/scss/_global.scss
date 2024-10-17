@@ -291,6 +291,7 @@ img {
   @include hover {
     background-color: var(--color-pink-700);
   }
+
   &:active {
     background-color: var(--color-pink-900);
   }
@@ -469,7 +470,7 @@ img {
     --form-checkbox: url('@img/checkboxmark-white.svg');
   }
   &--pink {
-    --color-form-placeholder: var(--color-secondary-dark);
+    --color-form-placeholder: var(--color-secondary-light);
     --color-form-link: var(--color-primary);
     --color-form-link-hover: var(--color-primary-light);
     --form-checkbox: url('@img/checkboxmark-pink.svg');
@@ -673,6 +674,58 @@ img {
   }
 }
 
+.socials {
+  display: flex;
+  gap: 10px;
+
+  &--big {
+    gap: 30px;
+    justify-content: space-between;
+    max-width: 500px;
+
+    .socials__link {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 2px solid var(--color-white);
+    }
+  }
+
+  &__link {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+
+    &--telegram {
+      background-image: url('@img/socials/telegram-round.svg');
+    }
+
+    &--whatsapp {
+      background-image: url('@img/socials/whatsapp-round.svg');
+    }
+
+    &--viber {
+      background-image: url('@img/socials/viber-round.svg');
+    }
+
+    &--ok {
+      background-image: url('@img/socials/ok-round.svg');
+    }
+
+    &--instagram {
+      background-image: url('@img/socials/instagram-round.svg');
+    }
+
+    &--vk {
+      background-image: url('@img/socials/vk-round.svg');
+    }
+
+    &--youtube {
+      background-image: url('@img/socials/youtube-round.svg');
+    }
+  }
+}
+
 @media (max-width: 999px) {
   :root {
     --gutter-outer: 140px;
@@ -740,5 +793,17 @@ img {
   }
   .form__quiz {
     padding: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .splide__pagination li {
+    width: 22px;
+  }
+  .socials--big {
+    .socials__link {
+      width: 60px;
+      height: 60px;
+    }
   }
 }

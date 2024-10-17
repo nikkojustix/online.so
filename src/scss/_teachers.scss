@@ -1,0 +1,40 @@
+.teachers {
+  &__inner {
+  }
+
+  &__slider {
+  }
+
+  &__slide {
+    max-width: 350px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: var(--color-secondary-light);
+    color: var(--color-white);
+  }
+
+  &__img {
+    border-radius: 8px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+    font-family: 'NEXTART', sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__subjects {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}

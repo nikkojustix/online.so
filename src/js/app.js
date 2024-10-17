@@ -33,13 +33,37 @@ elements.forEach((element) => {
 
 // document.querySelector('.current-year').innerHTML = new Date().getFullYear();
 
-const specialSlider = new Splide('.special-offers__slider', {
-  type: 'loop',
-  perPage: 1,
-  // height: '300px',
-  arrows: false,
-});
-specialSlider.mount();
+if (document.querySelector('.special-offers__slider')) {
+  const specialSlider = new Splide('.special-offers__slider', {
+    type: 'loop',
+    perPage: 1,
+    // height: '300px',
+    arrows: false,
+  });
+  specialSlider.mount();
+}
+
+if (document.querySelector('.teachers__slider')) {
+  const specialSlider = new Splide('.teachers__slider', {
+    type: 'loop',
+    perPage: 4,
+    // fixedWidth: '323px',
+    gap: '30px',
+    arrows: false,
+    breakpoints: {
+      1299: {
+        perPage: 3,
+      },
+      999: {
+        perPage: 2,
+      },
+      767: {
+        perPage: 1,
+      },
+    },
+  });
+  specialSlider.mount();
+}
 
 // scroll to top
 const scrollBtn = document.querySelector('.scroll-to-top');
