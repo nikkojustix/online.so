@@ -65,6 +65,20 @@ if (document.querySelector('.teachers__slider')) {
   specialSlider.mount();
 }
 
+const filterTrigger = document.querySelector('.filter__trigger-btn');
+const filterItems = document.querySelector('.filter__items');
+const filterClose = document.querySelector('.filter__items-close');
+if (filterTrigger) {
+  filterTrigger.addEventListener('click', () => {
+    filterItems.classList.add('filter__items--active');
+    document.body.classList.add('locked');
+  });
+  filterClose.addEventListener('click', () => {
+    filterItems.classList.remove('filter__items--active');
+    document.body.classList.remove('locked');
+  });
+}
+
 // scroll to top
 const scrollBtn = document.querySelector('.scroll-to-top');
 window.addEventListener('scroll', () => {
