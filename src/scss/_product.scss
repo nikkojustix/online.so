@@ -1,0 +1,278 @@
+.product {
+  &__inner {
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 16px;
+  }
+
+  &__info {
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__descr-title {
+    font-family: 'NEXTART', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+
+  &__descr {
+    margin: 0 0 25px;
+  }
+
+  &__info-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  &__price {
+    margin-bottom: 0;
+  }
+
+  &__price-value {
+  }
+
+  &__price-currency {
+  }
+
+  &__pros {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__pros-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    font-size: 32px;
+    text-align: center;
+  }
+
+  &__program {
+    margin-top: 150px;
+  }
+
+  &__program-title {
+  }
+
+  &__program-inner {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 30px;
+  }
+
+  &__program-main {
+  }
+
+  &__program-item {
+    padding: 12px 24px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    font-size: 24px;
+  }
+
+  &__program-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__teacher {
+    padding: 40px 40px 20px;
+    background-color: var(--color-pink-200);
+    border-radius: 16px;
+  }
+
+  &__teacher-img {
+    margin-bottom: 10px;
+    border-radius: 16px;
+    max-height: 550px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__teacher-name {
+    font-size: 32px;
+    font-family: 'NEXTART', sans-serif;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  &__teacher-subjects {
+    color: var(--color-white);
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    padding: 20px 40px;
+    background-color: var(--color-primary);
+    border-radius: 16px;
+  }
+
+  &__cta-title {
+    font-size: 40px;
+    font-family: 'NEXTART', sans-serif;
+    text-transform: uppercase;
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  &__cta-descr {
+    text-align: center;
+    color: var(--color-green-900);
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1299px) {
+  .product {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    &__descr-title {
+      font-size: 24px;
+    }
+    &__descr {
+      font-size: 13px;
+    }
+
+    &__pros {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__program-inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__program-aside {
+      flex-direction: row;
+    }
+
+    &__teacher {
+      flex: 1 0 48%;
+    }
+
+    &__cta {
+      flex: 1 0 48%;
+    }
+
+    &__cta-title {
+      margin-bottom: 20px;
+    }
+    &__cta-descr {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .product {
+    margin-top: 50px;
+
+    &__teacher-name {
+      font-size: 24px;
+    }
+
+    &__cta-title {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .product {
+    &__main {
+      grid-template-columns: 1fr;
+    }
+    &__img {
+      display: none;
+    }
+    &__info-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__pros {
+      margin-top: 60px;
+    }
+    &__pros-item {
+      font-size: 20px;
+    }
+    &__program {
+      margin-top: 60px;
+    }
+    &__program-aside {
+      flex-direction: column;
+    }
+    &__cta,
+    &__teacher {
+      flex: initial;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .product {
+    &__descr-title {
+      font-size: 18px;
+    }
+    &__price {
+      font-size: 24px;
+    }
+    &__pros {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    &__pros-item {
+      font-size: 18px;
+    }
+    &__program-item {
+      font-size: 16px;
+    }
+    &__teacher {
+      padding: 20px 20px 12px;
+    }
+    &__teacher-name {
+      font-size: 18px;
+    }
+    &__teacher-subjects {
+      font-size: 12px;
+    }
+    &__cta {
+      padding: 20px;
+    }
+    &__cta-title {
+      font-size: 18px;
+    }
+    &__cta-descr {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+}
